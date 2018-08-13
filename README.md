@@ -22,7 +22,7 @@ Note that this is not the same thing as key length as many may think. Security c
 ![alt-text](https://www.globalsign.com/files/1714/3284/2298/key-size-comparison.jpg)
 
 # Steps
-* Step 1 - Preparing your Linux Environment to use hardware crypto
+* Step 1 - ![Preparing your Linux Environment to use hardware crypto](https://github.com/guikarai/LinuxONE-crypto-utils/blob/master/part1.md)
 * Step 2 - Creating RSA crypto materials
 * Step 3 - Creating ECC crypto materials
 * Step 4 - Comparing RSA and ECC

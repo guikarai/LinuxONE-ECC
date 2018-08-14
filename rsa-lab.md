@@ -260,6 +260,6 @@ ls -l mycert*
 -rw-r--r-- 1 root root 9132 Aug 14 15:11 mycert-7680.pem
 ```
 
-As you can see, we generated digital certificates (all files starting with my-cert*) the digital signature of the 3MB pdf file and according each key size. Very interresting for digital signature verification.
+As you can see, we generated digital certificates (all files starting with my-cert*).
 
 This ends the RSA activity section. You can now start the ECC activity section.

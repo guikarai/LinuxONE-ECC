@@ -26,4 +26,4 @@ Note that this is not the same thing as key length as many may think. Security c
 * **Step 2** - [Enabling OpenSSL and openSSH to use the Hardware](https://github.com/guikarai/LinuxONE-crypto-utils/blob/master/part2.md)
 * **Step 3** - [RSA pubic key activities](https://github.com/guikarai/LinuxONE-ECC/edit/master/rsa-lab.md)
 * **Step 4** - [ECC pubic key activities](https://github.com/guikarai/LinuxONE-ECC/edit/master/ecc-lab.md)
-* **Step 5** - [Comparing RSA and ECC regarding performance]()
+* **Step 5** - [Comparing RSA and ECC performance]()

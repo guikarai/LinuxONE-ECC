@@ -23,7 +23,7 @@ Note that this is not the same thing as key length as many may think. Security c
 
 # About Hands-on LAB Steps
 * **Step 1** - [Preparing your Linux Environment to use hardware crypto](https://github.com/guikarai/LinuxONE-crypto-utils/blob/master/part1.md)
-* ** Step 2** [Enabling OpenSSL and openSSH to use the Hardware](https://github.com/guikarai/LinuxONE-crypto-utils/blob/master/part2.md)
+* **Step 2** - [Enabling OpenSSL and openSSH to use the Hardware](https://github.com/guikarai/LinuxONE-crypto-utils/blob/master/part2.md)
 * **Step 2** - Creating RSA crypto materials and use them in various situation
 * **Step 3** - Creating ECC crypto materials and use them in various situation
 * **Step 4** - Comparing RSA and ECC regarding performance

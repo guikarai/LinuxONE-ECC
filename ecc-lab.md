@@ -31,7 +31,7 @@ Let's make all these script executeable thanks to the following command:
 chmod +x *.sh
 ```
 
-## RSA performance table
+## ECC performance table
 
 The following performance table need to be completed by you during this lab part. This is important to provide at the end a summary of the perforance degradation of ECC cryptographic operation according key size.
 
@@ -199,57 +199,45 @@ Please, report to the performance table, the sum of **real+user+sys** time accor
 Let's reuse generated public and private keys to test how long it takes to **generate 10x digital certificates** with various RSA key size. Please, issue the following command:
 
 ```
-./generateRSAcertificates.sh
-****************** BEGIN OF RSA CERTIFICATE GENERATION  ****************************
-****************** CERTIFICATE WITH  1024  ****************************
-10x RSA CERTIFICATE  with 1024
+./generateECCcertificates.sh
+****************** BEGIN OF ECC CERTIFICATE GENERATION  ****************************
+****************** CERTIFICATE WITH prime256v1  ****************************
+ECC CERTIFICATE  with prime256v1
 
-real	0m2.725s
-user	0m2.424s
-sys	0m0.143s
-End of Test for 1024
+real	0m0.889s
+user	0m0.583s
+sys	0m0.131s
+End of Test for prime256v1
 
-****************** CERTIFICATE WITH  2048  ****************************
-10x RSA CERTIFICATE  with 2048
+****************** CERTIFICATE WITH secp384r1  ****************************
+ECC CERTIFICATE  with secp384r1
 
-real	0m14.471s
-user	0m13.293s
-sys	0m0.190s
-End of Test for 2048
+real	0m0.893s
+user	0m0.658s
+sys	0m0.135s
+End of Test for secp384r1
 
-****************** CERTIFICATE WITH  3072  ****************************
-10x RSA CERTIFICATE  with 3072
+****************** CERTIFICATE WITH secp521r1  ****************************
+ECC CERTIFICATE  with secp521r1
 
-real	0m52.000s
-user	0m48.090s
-sys	0m0.252s
-End of Test for 3072
+real	0m1.086s
+user	0m0.822s
+sys	0m0.124s
+End of Test for secp521r1
 
-****************** CERTIFICATE WITH  4096  ****************************
-10x RSA CERTIFICATE  with 4096
-
-real	2m20.024s
-user	2m10.473s
-sys	0m0.301s
-End of Test for 4096
-
-[**** Truncated ****]
+******************END OF TEST ECC CERTIFICATE GENERATION  ****************************
 ```
 
-Please, report to the performance table, the sum of **real+user+sys** time according key size for the column "**Certificate generation in seconds**". Don't you see the production limit of the RSA while hardening a digital certificates with bigger keys? And this is only about generating 10x x509 digital certificates !!! 
-
-This mainly explain why RSA will not be good for production beyond a key size of 4096.
+Please, report to the performance table, the sum of **real+user+sys** time according key size for the column "**Certificate generation in seconds**". As you can see, generating digital certificates is faster with ECC than with RSA. This is why some organization consider to use ECC to replace now RSA. Some of them use ECC for one time digital certificate. 
 
 Let's see together what has been generated. Please issue the following command:
 ```
 ls -l mycert*
--rw-r--r-- 1 root root 1783 Aug 14 15:07 mycert-1024.pem
--rw-r--r-- 1 root root 2924 Aug 14 15:07 mycert-2048.pem
--rw-r--r-- 1 root root 4058 Aug 14 15:08 mycert-3072.pem
--rw-r--r-- 1 root root 5187 Aug 14 15:11 mycert-4096.pem
--rw-r--r-- 1 root root 9132 Aug 14 15:11 mycert-7680.pem
+-rw-r--r-- 1 root root 1973 Aug 14 15:31 mycert-prime256v1.pem
+-rw-r--r-- 1 root root 2514 Aug 14 15:31 mycert-secp384r1.pem
+-rw-r--r-- 1 root root 3131 Aug 14 15:31 mycert-secp521r1.pem
 ```
 
-As you can see, we generated digital certificates (all files starting with my-cert*).
+As you can see, we generated ECC digital certificates (all files starting with my-cert*).
 
-This ends the RSA activity section. You can now start the ECC activity section.
+This ends the ECC activity section.

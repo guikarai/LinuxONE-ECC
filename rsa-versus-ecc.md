@@ -21,7 +21,7 @@ prime256v1    | | | |
 secp384r1     | | | |
 secp521r1     | | | |
 
-Let's simplified thise tables with the following table:
+Let's simplified these tables with the following table:
 
 RSA Key size in bits | ECC Key size in bits |  Key size factor  | Key generation factor | Signature verification factor  | Certificate generation factor
 ------------ | ------------------ | ----------------------- | --------------------------- | -------------------------- | ----------

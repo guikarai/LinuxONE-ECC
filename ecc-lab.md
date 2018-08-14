@@ -41,7 +41,7 @@ prime256v1    | | | | |
 secp384r1     | | | | |
 secp521r1     | | | | |
 
-## Generating keys with ECC
+## Generating public keys with ECC
 
 Let's put first thing first and let generate one ECC key pair according key size. Issue the following command.
 ```

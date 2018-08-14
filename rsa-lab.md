@@ -42,7 +42,7 @@ RSA 4096     | | | | |
 RSA 7680     | | | | |
 RSA 15360    | | | | |
 
-## Generating keys with RSA
+## Generating public keys with RSA
 
 Let's put first thing first and let generate one RSA key pair according key size. Issue the following command. Note that this script may need up to 240 seconds to generate RSA 15360 keys !!!! So, be patient.
 ```

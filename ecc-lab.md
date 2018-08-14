@@ -1,4 +1,4 @@
-# ECC pubic key activities
+# ECC public key activities
 
 We already tested RSA performance, now lets test ECC performance. That way you will be able to compare later.
 

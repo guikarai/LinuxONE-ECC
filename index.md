@@ -21,6 +21,6 @@ ls
 
 In the directory **/RSA** you will find a set of script allowing you to generate RSA keys, to perform a digital signature, and verify a digital signature.
 
-In the directory **/ECC** you will find a set of script allowing you to generate RSA keys, to perform a digital signature, and verify a digital signature.
+In the directory **/ECC** you will find a set of script allowing you to generate ECC keys, to perform a digital signature, and verify a digital signature.
 
 This ends this section, you can now start the RSA activity section.

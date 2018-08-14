@@ -43,9 +43,27 @@ This journey requires an existing Linux on IBM Z environment of your choice as s
 
 # Steps
 
-# About Hands-on LAB Steps
 * **Step 1** - [Preparing your Linux Environment to use hardware crypto](https://github.com/guikarai/LinuxONE-crypto-utils/blob/master/part1.md)
+    1. 
+    2.
+    3.
+    
 * **Step 2** - [Enabling OpenSSL and openSSH to use the Hardware](https://github.com/guikarai/LinuxONE-crypto-utils/blob/master/part2.md)
+    1. 
+    2.
+    3.
+    
 * **Step 3** - [Monitor RSA public key activity performance](https://github.com/guikarai/LinuxONE-ECC/edit/master/rsa-lab.md)
+    1. 
+    2.
+    3.
+    
 * **Step 4** - [Monitor ECC public key acticity performance](https://github.com/guikarai/LinuxONE-ECC/edit/master/ecc-lab.md)
+    1. 
+    2.
+    3.
+    
 * **Step 5** - [Compare RSA and ECC performance]()
+    1. 
+    2.
+    3.

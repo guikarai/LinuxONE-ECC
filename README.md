@@ -48,12 +48,14 @@ This journey requires an existing Linux on IBM Z environment of your choice as s
     1. Enabling the CPACF
     2. Installing libica
   ```  
-* **Step 2** - [Enabling OpenSSL and openSSH to use the Hardware](https://github.com/guikarai/LinuxONE-crypto-utils/blob/master/part2.md)
 
+* **Step 2** - [Enabling OpenSSL and openSSH to use the Hardware](https://github.com/guikarai/LinuxONE-crypto-utils/blob/master/part2.md)
+```
     1. 
     2.
     3.
-    
+```  
+
 * **Step 3** - [Monitor RSA public key activity performance](https://github.com/guikarai/LinuxONE-ECC/edit/master/rsa-lab.md)
 ```
     1. RSA performance table
@@ -62,6 +64,7 @@ This journey requires an existing Linux on IBM Z environment of your choice as s
     4. Verifying digital signature of a pdf file with RSA
     5. Generating x509 digital certificates with RSA
 ```    
+
 * **Step 4** - [Monitor ECC public key acticity performance](https://github.com/guikarai/LinuxONE-ECC/edit/master/ecc-lab.md)
 ```
     1. ECC performance table
@@ -70,7 +73,8 @@ This journey requires an existing Linux on IBM Z environment of your choice as s
     4. Verifying digital signature of a pdf file with ECC
     5. Generating x509 digital certificates with ECC
 ```    
-* **Step 5** - [Compare RSA and ECC performance]()
+
+* **Step 5** - [Compare RSA and ECC performance](https://github.com/guikarai/LinuxONE-ECC/blob/master/rsa-versus-ecc.md)
 ```
     1. Performance summary
     2. ECC and Hardware Acceleration

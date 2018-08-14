@@ -25,9 +25,9 @@ Let's simplified thise tables with the following table:
 
 RSA Key size in bits | ECC Key size in bits |  Key size factor  | Key generation factor | Signature verification factor  | Certificate generation factor
 ------------ | ------------------ | ----------------------- | --------------------------- | -------------------------- | ----------
-RSA 3072 | prime256v1    | | | |
-RSA 4096 | secp384r1     | | | |
-RSA 7680 | secp521r1     | | | |
+RSA 3072 | prime256v1    | 1:12 | | |
+RSA 7680 | secp384r1     | 1:20 | | |
+RSA 15360 | secp521r1     | 1:29 | | |
 
 **Note:**
 * Key size factor = RSA key size / ECC key size

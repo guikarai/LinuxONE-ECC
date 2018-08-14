@@ -1,7 +1,0 @@
-openssl ecparam -out privatekey.key -name prime256v1 -genkey
-openssl req -new -key privatekey.key -out csr.pem
-openssl req -x509 -days 365 -key privatekey.key -in csr.pem -out certificate.pem
-openssl s_server -cert certificate.pem -www
-cat privatekey.key > test.pem
-cat certificate.pem >> test.pem
-

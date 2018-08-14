@@ -67,7 +67,7 @@ End of Test for 1024
 [**** truncated ***]
 ```
 
-Please, report to the performance table, the sum of real+user+sys time according key size for the column "Key generation in seconds". At this step, you already realize how long it is to generate key pairs bigger than 4096!
+Please, report to the performance table, the sum of **real+user+sys** time according key size for the column "**Key generation in seconds**". At this step, you already realize how long it is to generate key pairs bigger than 4096!
 
 Let's see together what has been generated. Please issue the following command:
 ```
@@ -137,7 +137,7 @@ sys	0m0.221s
 End of Test for 15360
 ```
 
-Please, report to the performance table, the sum of real+user+sys time according key size for the column "Digital signature in seconds". Don't you see how explonential is the time required for such RSA crypto workload?
+Please, report to the performance table, the sum of **real+user+sys** time according key size for the column "**Digital signature in seconds**". Don't you see how explonential is the time required for such RSA crypto workload?
 
 Let's see together what has been generated. Please issue the following command:
 ```
@@ -202,7 +202,7 @@ sys	0m0.089s
 End of Test for 15360
 ```
 
-Please, report to the performance table, the sum of real+user+sys time according key size for the column "Signature verification in seconds". Don't you see how verifying a digital signature is faster than performing a digital signature with RSA?
+Please, report to the performance table, the sum of **real+user+sys** time according key size for the column "**Signature verification in seconds**". Don't you see how verifying a digital signature is faster than performing a digital signature with RSA?
 
 ## Generating x509 digital certificates with RSA
 
@@ -246,7 +246,7 @@ End of Test for 4096
 [**** Truncated ****]
 ```
 
-Please, report to the performance table, the sum of real+user+sys time according key size for the column "Certificate generation in seconds". Don't you see the production limit of the RSA while hardening a digital certificates with bigger keys? And this is only about generating 10x x509 digital certificates !!! 
+Please, report to the performance table, the sum of **real+user+sys** time according key size for the column "**Certificate generation in seconds**". Don't you see the production limit of the RSA while hardening a digital certificates with bigger keys? And this is only about generating 10x x509 digital certificates !!! 
 
 This mainly explain why RSA will not be good for production beyond a key size of 4096.
 

@@ -46,8 +46,7 @@ This journey requires an existing Linux on IBM Z environment of your choice as s
 * **Step 1** - [Preparing your Linux Environment to use hardware crypto](https://github.com/guikarai/LinuxONE-crypto-utils/blob/master/part1.md)
 
     1. Enabling the CPACF
-    2. Installing libica
-    3. 
+    1. Installing libica
     
 * **Step 2** - [Enabling OpenSSL and openSSH to use the Hardware](https://github.com/guikarai/LinuxONE-crypto-utils/blob/master/part2.md)
 

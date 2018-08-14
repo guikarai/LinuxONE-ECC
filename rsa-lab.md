@@ -2,7 +2,7 @@
 
 ## RSA performance table
 
-RSA Key size in bytes | Key generation in seconds |  Digital signature in seconds  | Signature verification in seconds  | Certificate generation in seconds | TLS Handshakes
+RSA Key size | Key generation in seconds |  Digital signature in seconds  | Signature verification in seconds  | Certificate generation in seconds | TLS Handshakes
 ------------ | ------------------ | ----------------------- | --------------------------- | -------------------------- | ----------
 RSA 1024     | | | | |
 RSA 2048     | | | | |

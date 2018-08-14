@@ -1,6 +1,13 @@
-# Pervasive Encryption Applied - Hands-on LABs
+# Protect data on LinuxONE with "Elliptic-curve cryptography"
 
-## Elliptic-curve cryptography (ECC)
+When you will complete this hands-on exploration of the ECC on LinuxONE, you will understand how to:
+* Preparing your Linux Environment to use hardware crypto
+* Enabling OpenSSL and openSSH to use the Hardware
+* Monitor RSA public key activity performance
+* Monitor ECC public key activity performance
+* Compare RSA and ECC performance
+
+## What is ECC?
 Elliptic-curve cryptography (ECC) is an approach to public-key cryptography based on the algebraic structure of elliptic curves over finite fields. ECC requires smaller keys compared to non-ECC cryptography (based on plain Galois fields) to provide equivalent security. Elliptic curves are applicable for key agreement, digital signatures, pseudo-random generators and other tasks. Indirectly, they can be used for encryption by combining the key agreement with a symmetric encryption scheme. They are also used in several integer factorization algorithms based on elliptic curves that have applications in cryptography, such as Lenstra elliptic-curve factorization.
 
 ## Why ECC?
@@ -24,6 +31,6 @@ Note that this is not the same thing as key length as many may think. Security c
 # About Hands-on LAB Steps
 * **Step 1** - [Preparing your Linux Environment to use hardware crypto](https://github.com/guikarai/LinuxONE-crypto-utils/blob/master/part1.md)
 * **Step 2** - [Enabling OpenSSL and openSSH to use the Hardware](https://github.com/guikarai/LinuxONE-crypto-utils/blob/master/part2.md)
-* **Step 3** - [RSA pubic key activities](https://github.com/guikarai/LinuxONE-ECC/edit/master/rsa-lab.md)
-* **Step 4** - [ECC pubic key activities](https://github.com/guikarai/LinuxONE-ECC/edit/master/ecc-lab.md)
-* **Step 5** - [Comparing RSA and ECC performance]()
+* **Step 3** - [Monitor RSA public key activity performance](https://github.com/guikarai/LinuxONE-ECC/edit/master/rsa-lab.md)
+* **Step 4** - [Monitor ECC public key acticity performance](https://github.com/guikarai/LinuxONE-ECC/edit/master/ecc-lab.md)
+* **Step 5** - [Compare RSA and ECC performance]()

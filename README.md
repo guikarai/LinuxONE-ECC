@@ -2,7 +2,7 @@
 
 When you will complete this hands-on exploration of the ECC on LinuxONE, you will understand how to:
 * Preparing your Linux Environment to use hardware crypto
-* Enabling OpenSSL and openSSH to use the Hardware
+* Enabling OpenSSL to use the Hardware
 * Monitor RSA public key activity performance
 * Monitor ECC public key activity performance
 * Compare RSA and ECC performance

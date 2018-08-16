@@ -110,6 +110,8 @@ End of Test for secp521r1
 
 Please, report to the performance table, the sum of **real+user+sys** time according key size for the column "**Key generation in seconds**". I guest you also realize this is very very FAST! Isn't?
 
+![alt-text](https://github.com/guikarai/LinuxONE-ECC/blob/master/images/keygen-ECC.png)
+
 Let's see together what has been generated. Please issue the following command:
 ```
 ls -l p*
@@ -158,6 +160,8 @@ End of Test for secp521r1
 
 Please, report to the performance table, the sum of **real+user+sys** time according key size for the column "**Digital signature in seconds**". Still insanely FAST!!!
 
+![alt-text](https://github.com/guikarai/LinuxONE-ECC/blob/master/images/signature-ECC.png)
+
 Let's see together what has been generated. Please issue the following command:
 ```
 ls -l *.bin
@@ -204,6 +208,8 @@ End of Test for secp521r1
 
 Please, report to the performance table, the sum of **real+user+sys** time according key size for the column "**Signature verification in seconds**". Huhhh... too fast again.
 
+![alt-text](https://github.com/guikarai/LinuxONE-ECC/blob/master/images/signature-verification-ECC.png)
+
 ## Generating x509 digital certificates with RSA
 
 Let's reuse generated public and private keys to test how long it takes to **generate 10x digital certificates** with various RSA key size. Please, issue the following command:
@@ -239,6 +245,8 @@ End of Test for secp521r1
 ```
 
 Please, report to the performance table, the sum of **real+user+sys** time according key size for the column "**Certificate generation in seconds**". As you can see, generating digital certificates is faster with ECC than with RSA. This is why some organization consider to use ECC to replace now RSA. Some of them use ECC for one time digital certificate. 
+
+![alt-text](https://github.com/guikarai/LinuxONE-ECC/blob/master/images/certificate-ECC.png)
 
 Let's see together what has been generated. Please issue the following command:
 ```

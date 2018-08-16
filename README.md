@@ -45,20 +45,16 @@ Note that this is not the same thing as key length as many may think. Security c
 
 # Steps
 
-* **Step 1** - [Preparing your Linux Environment to use hardware crypto](https://github.com/guikarai/LinuxONE-crypto-utils/blob/master/part1.md)
+* **Step 1** - [Enabling Linux to use hardware encryption](https://github.com/guikarai/LinuxONE-ECC/blob/master/linux-crypto.md)
 ```
-    1. Enabling the CPACF
-    2. Installing libica
+    1. Introduction to the pervasive encryption
+    2. Introduction to the Linux crypto stack
+    3.  Enabling Linux to use the Hardware
+    4.  Enabling OpenSSL to use the hardware acceleration support
+    5.  Checking Hardware Crypto functions
   ```  
 
-* **Step 2** - [Enabling OpenSSL and openSSH to use the Hardware](https://github.com/guikarai/LinuxONE-crypto-utils/blob/master/part2.md)
-```
-    1. 
-    2.
-    3.
-```  
-
-* **Step 3** - [Monitor RSA public key activity performance](https://github.com/guikarai/LinuxONE-ECC/edit/master/rsa-lab.md)
+* **Step 2** - [Monitor RSA public key activity performance](https://github.com/guikarai/LinuxONE-ECC/edit/master/rsa-lab.md)
 ```
     1. RSA performance table
     2. Generating public keys with RSA
@@ -67,7 +63,7 @@ Note that this is not the same thing as key length as many may think. Security c
     5. Generating x509 digital certificates with RSA
 ```    
 
-* **Step 4** - [Monitor ECC public key acticity performance](https://github.com/guikarai/LinuxONE-ECC/edit/master/ecc-lab.md)
+* **Step 3** - [Monitor ECC public key acticity performance](https://github.com/guikarai/LinuxONE-ECC/edit/master/ecc-lab.md)
 ```
     1. ECC performance table
     2. Generating public keys with ECC
@@ -76,7 +72,7 @@ Note that this is not the same thing as key length as many may think. Security c
     5. Generating x509 digital certificates with ECC
 ```    
 
-* **Step 5** - [Compare RSA and ECC performance](https://github.com/guikarai/LinuxONE-ECC/blob/master/rsa-versus-ecc.md)
+* **Step 4** - [Compare RSA and ECC performance](https://github.com/guikarai/LinuxONE-ECC/blob/master/rsa-versus-ecc.md)
 ```
     1. Performance summary
     2. ECC and Hardware Acceleration

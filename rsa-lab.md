@@ -1,4 +1,14 @@
-# RSA pubic key activities
+# Welcome in Step 2 about Monitoring RSA pubic key activities
+
+## Agenda of this Step 2 is the following:
+1. Overview of the lab content
+2. RSA performance table
+3. Generating public keys with RSA
+4. Signing a pdf file with RSA
+5. Verifying digital signature of a pdf file with RSA
+6. Generating x509 digital certificates with RSA
+
+## Overview of the lab content
 
 In this section, let's test performance of RSA in very different conditions. We will used openssl under the cover, in order to perform all the cryptographic activities. That is good, because in previous section, we optimized opensssl in order to speed-up the hardware way cryptographic operations.
 

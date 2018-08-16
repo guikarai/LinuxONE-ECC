@@ -63,7 +63,7 @@ Note that this is not the same thing as key length as many may think. Security c
     5. Generating x509 digital certificates with RSA
 ```    
 
-* **Step 3** - [Monitor ECC public key acticity performance](https://github.com/guikarai/LinuxONE-ECC/edit/master/ecc-lab.md)
+* **Step 3** - [Monitor ECC public key acticity performance](https://github.com/guikarai/LinuxONE-ECC/blob/master/ecc-lab.md)
 ```
     1. ECC performance table
     2. Generating public keys with ECC

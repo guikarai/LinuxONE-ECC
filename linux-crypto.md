@@ -7,7 +7,7 @@
 4. Enabling OpenSSL to use the hardware acceleration support
 5. Checking Hardware Crypto functions
 
-# Provisioning a LinuxONE Linux Guest thanks to the Community Cloud
+## Provisioning a LinuxONE Linux Guest thanks to the Community Cloud
 
 ## Sign up for a LinuxONE Community Cloud trial account
 If you have not done so already, register at http://www.ibm.com/linuxone/try for a 120-day trial account. You will receive an email containing credentials to access the LinuxONE Community Cloud self-service portal. This is where you can start exploring all our available services.

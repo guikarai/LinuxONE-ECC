@@ -27,17 +27,16 @@ secp521r1     | | | |
 
 Let's simplified these tables with the following table:
 
-RSA Key size in bits | ECC Key size in bits |  Key size factor  | Key generation factor | Signature verification factor  | Certificate generation factor
+RSA Key size in bits | ECC Key size in bits |  Key size factor  | Key generation factor | Signature factor  | Certificate generation factor
 ------------ | ------------------ | ----------------------- | --------------------------- | -------------------------- | ----------
-RSA 3072 | prime256v1    | 1:12 | | |
-RSA 7680 | secp384r1     | 1:20 | | |
-RSA 15360 | secp521r1     | 1:29 | | |
+RSA 3072 | prime256v1    | 1:12 | 1:8 | 1:3 | 1:18
+RSA 7680 | secp384r1     | 1:20 | 1:82 | 1:25 | 1:200
+RSA 15360 | secp521r1     | 1:29 | 1:1600 | 1:23 | 1:1500+
 
 **Note:**
 * Key size factor = RSA key size / ECC key size
 * Key generation factor = RSA Key generation in seconds / ECC Key generation in seconds
-* Digital signature = RSA Digital signature in seconds / ECC Digital signature in seconds
-* Signature verification factor = RSA Signature verification in seconds / ECC Signature verification in seconds
+* Signature factor = RSA Digital signature in seconds / ECC Digital signature in seconds
 * Certificate generation factor = RSA Certificate generation in seconds / ECC Certificate generation in seconds
 
 ## ECC and Hardware Acceleration

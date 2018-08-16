@@ -54,7 +54,7 @@ Note that this is not the same thing as key length as many may think. Security c
     5.  Checking Hardware Crypto functions
   ```  
 
-* **Step 2** - [Monitor RSA public key activity performance](https://github.com/guikarai/LinuxONE-ECC/edit/master/rsa-lab.md)
+* **Step 2** - [Monitor RSA public key activity performance](https://github.com/guikarai/LinuxONE-ECC/blob/master/rsa-lab.md)
 ```
     1. RSA performance table
     2. Generating public keys with RSA

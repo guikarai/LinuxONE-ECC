@@ -1,4 +1,14 @@
-# ECC public key activities
+# Welcome in Step 3 about Monitoring RSA pubic key activities
+
+## Agenda of this Step 3 is the following:
+1. Overview of the lab content
+2. ECC performance table
+3. Generating public keys with ECC
+4. Signing a pdf file with ECC
+5. Verifying digital signature of a pdf file with ECC
+6. Generating x509 digital certificates with ECC
+
+## Overview of the lab content
 
 We already tested RSA performance, now lets test ECC performance. That way you will be able to compare later.
 

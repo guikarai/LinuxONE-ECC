@@ -240,4 +240,4 @@ ls -l mycert*
 
 As you can see, we generated ECC digital certificates (all files starting with my-cert*).
 
-This ends the ECC activity section.
+This ends the ECC activity section. You are now ready to compare ECC and RSA regarding performance in [Step 4](https://github.com/guikarai/LinuxONE-ECC/blob/master/rsa-versus-ecc.md).

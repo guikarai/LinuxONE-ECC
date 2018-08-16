@@ -1,4 +1,8 @@
-# RSA versus ECC performance
+# Welcome in Step 4 about comparing RSA and ECC performance.
+
+## Agenda of this Step 4 is the following:
+1. Performance summary
+2. ECC and Hardware Acceleration
 
 ## Performance summary
 In previous section, you tested the RSA and the ECC performance. You probably understood already how fast ECC is.

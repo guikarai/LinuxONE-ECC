@@ -1,4 +1,4 @@
-# Welcome in Step 3 about Monitoring RSA pubic key activities
+# Welcome in Step 3 about monitoring ECC public key acticity performance.
 
 ## Agenda of this Step 3 is the following:
 1. Overview of the lab content

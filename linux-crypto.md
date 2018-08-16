@@ -9,10 +9,10 @@
 
 ## Provisioning a LinuxONE Linux Guest thanks to the Community Cloud
 
-## Sign up for a LinuxONE Community Cloud trial account
+### Sign up for a LinuxONE Community Cloud trial account
 If you have not done so already, register at http://www.ibm.com/linuxone/try for a 120-day trial account. You will receive an email containing credentials to access the LinuxONE Community Cloud self-service portal. This is where you can start exploring all our available services.
 
-## Deploy a virtual server instance
+### Deploy a virtual server instance
 If you have not deployed a virtual server already, please follow these [instructions](http://developer.ibm.com/linuxone/wp-content/uploads/sites/57/virtual-servers-quick-start.pdf) to create one before proceeding. Make sure you select a flavor (resource definition) with 4 GB of memory. 
 
 This quick-start guide has been tested with the following Linux distributions: **Red Hat Enterprise Linux (RHEL) 7.2**

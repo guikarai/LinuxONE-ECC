@@ -262,4 +262,4 @@ ls -l mycert*
 
 As you can see, we generated digital certificates (all files starting with my-cert*).
 
-This ends the RSA activity section. You can now start the ECC activity section.
+This ends the RSA activity section. You can now start the ECC activity section [Step 3](https://github.com/guikarai/LinuxONE-ECC/blob/master/ecc-lab.md).

@@ -155,6 +155,8 @@ Now, we have enough crypto materials. Let's reuse generated private keys to test
 
 Please, report to the performance table, the sum of **real+user+sys** time according key size for the column "**Digital signature in seconds**". Don't you see how explonential is the time required for such RSA crypto workload?
 
+![alt-text](https://github.com/guikarai/LinuxONE-ECC/blob/master/images/signature-RSA.png)
+
 Let's see together what has been generated. Please issue the following command:
 ```
 ls -l *.bin
@@ -176,51 +178,54 @@ We have enough crypto materials. We have a detached digital signature file. Let'
 ```
 ./verifyPDFwithRSA.sh
 
-****************** SIGNATURE VERIFICATION RSA Ciphers ****************************
-100 RSA Signature VERIFICATION with 1024
+  ****************** SIGNATURE VERIFICATION RSA Ciphers ****************************
+  100 RSA Signature VERIFICATION with 1024
 
-real	0m0.311s
-user	0m0.205s
-sys	0m0.087s
-End of Test for 1024
+  real	0m0.311s
+  user	0m0.205s
+  sys	0m0.087s
+  End of Test for 1024
 
-100 RSA Signature VERIFICATION with 2048
+  100 RSA Signature VERIFICATION with 2048
 
-real	0m0.332s
-user	0m0.218s
-sys	0m0.088s
-End of Test for 2048
+  real	0m0.332s
+  user	0m0.218s
+  sys	0m0.088s
+  End of Test for 2048
 
-100 RSA Signature VERIFICATION with 3072
+  100 RSA Signature VERIFICATION with 3072
 
-real	0m0.316s
-user	0m0.218s
-sys	0m0.081s
-End of Test for 3072
+  real	0m0.316s
+  user	0m0.218s
+  sys	0m0.081s
+  End of Test for 3072
 
-100 RSA Signature VERIFICATION with 4096
+  100 RSA Signature VERIFICATION with 4096
 
-real	0m0.351s
-user	0m0.234s
-sys	0m0.090s
-End of Test for 4096
+  real	0m0.351s
+  user	0m0.234s
+  sys	0m0.090s
+  End of Test for 4096
 
-100 RSA Signature VERIFICATION with 7680
+  100 RSA Signature VERIFICATION with 7680
 
-real	0m0.397s
-user	0m0.283s
-sys	0m0.088s
-End of Test for 7680
+  real	0m0.397s
+  user	0m0.283s
+  sys	0m0.088s
+  End of Test for 7680
 
-100 RSA Signature VERIFICATION with 15360
+  100 RSA Signature VERIFICATION with 15360
 
-real	0m0.645s
-user	0m0.502s
-sys	0m0.089s
-End of Test for 15360
+  real	0m0.645s
+  user	0m0.502s
+  sys	0m0.089s
+  End of Test for 15360
 ```
 
 Please, report to the performance table, the sum of **real+user+sys** time according key size for the column "**Signature verification in seconds**". Don't you see how verifying a digital signature is faster than performing a digital signature with RSA?
+
+![alt-text](https://github.com/guikarai/LinuxONE-ECC/blob/master/images/signature-verification-RSA.png)
+
 
 ## Generating x509 digital certificates with RSA
 
@@ -229,43 +234,45 @@ Let's reuse generated public and private keys to test how long it takes to **gen
 ```
 ./generateRSAcertificates.sh
 
-****************** BEGIN OF RSA CERTIFICATE GENERATION  ****************************
-****************** CERTIFICATE WITH  1024  ****************************
-10x RSA CERTIFICATE  with 1024
+  ****************** BEGIN OF RSA CERTIFICATE GENERATION  ****************************
+  ****************** CERTIFICATE WITH  1024  ****************************
+  10x RSA CERTIFICATE  with 1024
 
-real	0m2.725s
-user	0m2.424s
-sys	0m0.143s
-End of Test for 1024
+  real	0m2.725s
+  user	0m2.424s
+  sys	0m0.143s
+  End of Test for 1024
 
-****************** CERTIFICATE WITH  2048  ****************************
-10x RSA CERTIFICATE  with 2048
+  ****************** CERTIFICATE WITH  2048  ****************************
+  10x RSA CERTIFICATE  with 2048
 
-real	0m14.471s
-user	0m13.293s
-sys	0m0.190s
-End of Test for 2048
+  real	0m14.471s
+  user	0m13.293s
+  sys	0m0.190s
+  End of Test for 2048
 
-****************** CERTIFICATE WITH  3072  ****************************
-10x RSA CERTIFICATE  with 3072
+  ****************** CERTIFICATE WITH  3072  ****************************
+  10x RSA CERTIFICATE  with 3072
 
-real	0m52.000s
-user	0m48.090s
-sys	0m0.252s
-End of Test for 3072
+  real	0m52.000s
+  user	0m48.090s
+  sys	0m0.252s
+  End of Test for 3072
 
-****************** CERTIFICATE WITH  4096  ****************************
-10x RSA CERTIFICATE  with 4096
+  ****************** CERTIFICATE WITH  4096  ****************************
+  10x RSA CERTIFICATE  with 4096
 
-real	2m20.024s
-user	2m10.473s
-sys	0m0.301s
-End of Test for 4096
+  real	2m20.024s
+  user	2m10.473s
+  sys	0m0.301s
+  End of Test for 4096
 
-[**** Truncated ****]
+  [**** Truncated ****]
 ```
 
 Please, report to the performance table, the sum of **real+user+sys** time according key size for the column "**Certificate generation in seconds**". Don't you see the production limit of the RSA while hardening a digital certificates with bigger keys? And this is only about generating 10x x509 digital certificates !!! 
+
+![alt-text](https://github.com/guikarai/LinuxONE-ECC/blob/master/images/certificate-RSA.png)
 
 This mainly explain why RSA will not be good for production beyond a key size of 4096.
 
@@ -273,12 +280,12 @@ Let's see together what has been generated. Please issue the following command:
 ```
 ls -l mycert*
 
--rw-r--r-- 1 root root 1783 Aug 14 15:07 mycert-1024.pem
--rw-r--r-- 1 root root 9132 Aug 14 15:11 mycert-15360.pem
--rw-r--r-- 1 root root 2924 Aug 14 15:07 mycert-2048.pem
--rw-r--r-- 1 root root 4058 Aug 14 15:08 mycert-3072.pem
--rw-r--r-- 1 root root 5187 Aug 14 15:11 mycert-4096.pem
--rw-r--r-- 1 root root 9132 Aug 14 15:11 mycert-7680.pem
+  -rw-r--r-- 1 root root 1783 Aug 14 15:07 mycert-1024.pem
+  -rw-r--r-- 1 root root 9132 Aug 14 15:11 mycert-15360.pem
+  -rw-r--r-- 1 root root 2924 Aug 14 15:07 mycert-2048.pem
+  -rw-r--r-- 1 root root 4058 Aug 14 15:08 mycert-3072.pem
+  -rw-r--r-- 1 root root 5187 Aug 14 15:11 mycert-4096.pem
+  -rw-r--r-- 1 root root 9132 Aug 14 15:11 mycert-7680.pem
 ```
 
 As you can see, we generated digital certificates (all files starting with my-cert*).

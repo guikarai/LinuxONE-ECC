@@ -81,6 +81,8 @@ Let's put first thing first and let generate one RSA key pair according key size
 
 Please, report to the performance table, the sum of **real+user+sys** time according key size for the column "**Key generation in seconds**". At this step, you already realize how long it is to generate key pairs bigger than 4096!
 
+![alt-text](https://github.com/guikarai/LinuxONE-ECC/blob/master/images/keygen-RSA.png)
+
 Let's see together what has been generated. Please issue the following command:
 ```
 ls -l p*

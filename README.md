@@ -49,9 +49,9 @@ Note that this is not the same thing as key length as many may think. Security c
 ```
     1. Introduction to the pervasive encryption
     2. Introduction to the Linux crypto stack
-    3.  Enabling Linux to use the Hardware
-    4.  Enabling OpenSSL to use the hardware acceleration support
-    5.  Checking Hardware Crypto functions
+    3. Enabling Linux to use the Hardware
+    4. Enabling OpenSSL to use the hardware acceleration support
+    5. Checking Hardware Crypto functions
   ```  
 
 * **Step 2** - [Monitor RSA public key activity performance](https://github.com/guikarai/LinuxONE-ECC/blob/master/rsa-lab.md)

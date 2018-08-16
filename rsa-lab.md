@@ -1,4 +1,4 @@
-# Welcome in Step 2 about Monitoring RSA pubic key activities
+# Welcome in Step 2 about monitoring RSA public key acticity performance.
 
 ## Agenda of this Step 2 is the following:
 1. Overview of the lab content

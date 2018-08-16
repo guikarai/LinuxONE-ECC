@@ -411,4 +411,4 @@ icastats
 **Note:** We can clearly see here the crypto offload in encryption operations. 96681976 operations were offloaded to the CPACF.
 **Note2:** We can clearly see here the crypto offload in decryption operations. 115370154 operations were offloaded to the CPACF.
 
-You are now ready to go the [Step 2](https://github.com/IBM/protect-data-on-linuxone-with-pervasive-encryption/blob/master/part2.md).
+You are now ready to go the [Step 2]((https://github.com/guikarai/LinuxONE-ECC/edit/master/rsa-lab.md).

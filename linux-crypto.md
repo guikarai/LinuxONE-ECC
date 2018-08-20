@@ -43,23 +43,24 @@ A Linux on IBM Z user can easily check whether the Crypto Enablement feature is 
 on your hardware.
 ```
 cat /proc/cpuinfo
-vendor_id       : IBM/S390
-# processors    : 6
-bogomips per cpu: 21881.00
-max thread id   : 0
-features	: esan3 zarch stfle msa ldisp eimm dfp edat etf3eh highgprs te vx sie 
-cache0          : level=1 type=Data scope=Private size=128K line_size=256 associativity=8
-cache1          : level=1 type=Instruction scope=Private size=128K line_size=256 associativity=8
-cache2          : level=2 type=Data scope=Private size=4096K line_size=256 associativity=8
-cache3          : level=2 type=Instruction scope=Private size=2048K line_size=256 associativity=8
-cache4          : level=3 type=Unified scope=Shared size=131072K line_size=256 associativity=32
-cache5          : level=4 type=Unified scope=Shared size=688128K line_size=256 associativity=42
-processor 0: version = FF,  identification = 233EF7,  machine = 3906
-processor 1: version = FF,  identification = 233EF7,  machine = 3906
-processor 2: version = FF,  identification = 233EF7,  machine = 3906
-processor 3: version = FF,  identification = 233EF7,  machine = 3906
-processor 4: version = FF,  identification = 233EF7,  machine = 3906
-processor 5: version = FF,  identification = 233EF7,  machine = 3906
+
+  vendor_id       : IBM/S390
+  # processors    : 6
+  bogomips per cpu: 21881.00
+  max thread id   : 0
+  features	: esan3 zarch stfle msa ldisp eimm dfp edat etf3eh highgprs te vx sie 
+  cache0          : level=1 type=Data scope=Private size=128K line_size=256 associativity=8
+  cache1          : level=1 type=Instruction scope=Private size=128K line_size=256 associativity=8
+  cache2          : level=2 type=Data scope=Private size=4096K line_size=256 associativity=8
+  cache3          : level=2 type=Instruction scope=Private size=2048K line_size=256 associativity=8
+  cache4          : level=3 type=Unified scope=Shared size=131072K line_size=256 associativity=32
+  cache5          : level=4 type=Unified scope=Shared size=688128K line_size=256 associativity=42
+  processor 0: version = FF,  identification = 233EF7,  machine = 3906
+  processor 1: version = FF,  identification = 233EF7,  machine = 3906
+  processor 2: version = FF,  identification = 233EF7,  machine = 3906
+  processor 3: version = FF,  identification = 233EF7,  machine = 3906
+  processor 4: version = FF,  identification = 233EF7,  machine = 3906
+  processor 5: version = FF,  identification = 233EF7,  machine = 3906
 ```
 
 **Note**: msa on line 4, indicates that the CPACF instruction is properly supported and detected.
@@ -77,41 +78,42 @@ The icainfo command displays which CPACF functions are supported by the implemen
 
 ```
 icainfo
-      Cryptographic algorithm support      
--------------------------------------------
- function      |  hardware  |  software  
----------------+------------+------------
-         SHA-1 |    yes     |     yes
-       SHA-224 |    yes     |     yes
-       SHA-256 |    yes     |     yes
-       SHA-384 |    yes     |     yes
-       SHA-512 |    yes     |     yes
-         GHASH |    yes     |      no
-         P_RNG |    yes     |     yes
-  DRBG-SHA-512 |    yes     |     yes
-        RSA ME |     no     |     yes
-       RSA CRT |     no     |     yes
-       DES ECB |    yes     |     yes
-       DES CBC |    yes     |     yes
-       DES OFB |    yes     |      no
-       DES CFB |    yes     |      no
-       DES CTR |    yes     |      no
-      DES CMAC |    yes     |      no
-      3DES ECB |    yes     |     yes
-      3DES CBC |    yes     |     yes
-      3DES OFB |    yes     |      no
-      3DES CFB |    yes     |      no
-      3DES CTR |    yes     |      no
-     3DES CMAC |    yes     |      no
-       AES ECB |    yes     |     yes
-       AES CBC |    yes     |     yes
-       AES OFB |    yes     |      no
-       AES CFB |    yes     |      no
-       AES CTR |    yes     |      no
-      AES CMAC |    yes     |      no
-       AES XTS |    yes     |      no
--------------------------------------------
-Built-in FIPS support: FIPS mode inactive.
+
+        Cryptographic algorithm support      
+  -------------------------------------------
+   function      |  hardware  |  software  
+  ---------------+------------+------------
+           SHA-1 |    yes     |     yes
+         SHA-224 |    yes     |     yes
+         SHA-256 |    yes     |     yes
+         SHA-384 |    yes     |     yes
+         SHA-512 |    yes     |     yes
+           GHASH |    yes     |      no
+           P_RNG |    yes     |     yes
+    DRBG-SHA-512 |    yes     |     yes
+          RSA ME |     no     |     yes
+         RSA CRT |     no     |     yes
+         DES ECB |    yes     |     yes
+         DES CBC |    yes     |     yes
+         DES OFB |    yes     |      no
+         DES CFB |    yes     |      no
+         DES CTR |    yes     |      no
+        DES CMAC |    yes     |      no
+        3DES ECB |    yes     |     yes
+        3DES CBC |    yes     |     yes
+        3DES OFB |    yes     |      no
+        3DES CFB |    yes     |      no
+        3DES CTR |    yes     |      no
+       3DES CMAC |    yes     |      no
+         AES ECB |    yes     |     yes
+         AES CBC |    yes     |     yes
+         AES OFB |    yes     |      no
+         AES CFB |    yes     |      no
+         AES CTR |    yes     |      no
+        AES CMAC |    yes     |      no
+         AES XTS |    yes     |      no
+  -------------------------------------------
+  Built-in FIPS support: FIPS mode inactive.
 ```
 
 From the **cpuinfo** output, you can find the features that are enabled in the central processors. 
@@ -141,79 +143,81 @@ modprobe gcm
 Validate that all the crypto modules are properly loaded. Please issue the following command:
 ```
 lsmod
-Module                  Size  Used by
-ghash_generic          12647  0 
-ghash_s390             12608  0 
-xts                    12944  0 
-gf128mul               18889  2 xts,ghash_generic
-ap                     40210  0 
-sha512_s390            12637  0 
-des_s390               13605  0 
-des_generic            25475  1 des_s390
-aes_s390               18044  0 
-prng                   15562  0 
-gcm                    27822  0 
-qeth_l3                96273  1 
-dm_mirror              27404  0 
-dm_region_hash         20992  1 dm_mirror
-dm_log                 19301  2 dm_region_hash,dm_mirror
-dm_mod                175666  2 dm_log,dm_mirror
-nfsd                  483013  1 
-auth_rpcgss            87192  1 nfsd
-nfs_acl                12837  1 nfsd
-lockd                 126989  1 nfsd
-grace                  13684  2 nfsd,lockd
-sunrpc                475171  7 nfsd,auth_rpcgss,lockd,nfs_acl
-smsgiucv_app           13100  0 
-smsgiucv               13564  1 smsgiucv_app
-ip_tables              28006  0 
-ext4                  752462  1 
-mbcache                19112  1 ext4
-jbd2                  144631  1 ext4
-qeth_l2                50075  1 
-dasd_eckd_mod         121814  4 
-dasd_mod              147983  3 dasd_eckd_mod
-qeth                  156071  2 qeth_l2,qeth_l3
-ccwgroup               19383  1 qeth
-qdio                   76112  3 qeth,qeth_l2,qeth_l3
+
+  Module                  Size  Used by
+  ghash_generic          12647  0 
+  ghash_s390             12608  0 
+  xts                    12944  0 
+  gf128mul               18889  2 xts,ghash_generic
+  ap                     40210  0 
+  sha512_s390            12637  0 
+  des_s390               13605  0 
+  des_generic            25475  1 des_s390
+  aes_s390               18044  0 
+  prng                   15562  0 
+  gcm                    27822  0 
+  qeth_l3                96273  1 
+  dm_mirror              27404  0 
+  dm_region_hash         20992  1 dm_mirror
+  dm_log                 19301  2 dm_region_hash,dm_mirror
+  dm_mod                175666  2 dm_log,dm_mirror
+  nfsd                  483013  1 
+  auth_rpcgss            87192  1 nfsd
+  nfs_acl                12837  1 nfsd
+  lockd                 126989  1 nfsd
+  grace                  13684  2 nfsd,lockd
+  sunrpc                475171  7 nfsd,auth_rpcgss,lockd,nfs_acl
+  smsgiucv_app           13100  0 
+  smsgiucv               13564  1 smsgiucv_app
+  ip_tables              28006  0 
+  ext4                  752462  1 
+  mbcache                19112  1 ext4
+  jbd2                  144631  1 ext4
+  qeth_l2                50075  1 
+  dasd_eckd_mod         121814  4 
+  dasd_mod              147983  3 dasd_eckd_mod
+  qeth                  156071  2 qeth_l2,qeth_l3
+  ccwgroup               19383  1 qeth
+  qdio                   76112  3 qeth,qeth_l2,qeth_l3
 ```
 
 Validate that the libica crypto API is working properly. Please issue the following command:
 ```
 icastats
- function     |          # hardware      |       # software
---------------+--------------------------+-------------------------
-              |       ENC    CRYPT   DEC |        ENC    CRYPT   DEC
---------------+--------------------------+-------------------------
-        SHA-1 |               0          |                0
-      SHA-224 |               0          |                0
-      SHA-256 |               0          |                0
-      SHA-384 |               0          |                0
-      SHA-512 |               0          |                0
-        GHASH |               0          |                0
-        P_RNG |               0          |                0
- DRBG-SHA-512 |             169          |                0
-       RSA-ME |               0          |                0
-      RSA-CRT |               0          |                0
-      DES ECB |         0              0 |         0             0
-      DES CBC |         0              0 |         0             0
-      DES OFB |         0              0 |         0             0
-      DES CFB |         0              0 |         0             0
-      DES CTR |         0              0 |         0             0
-     DES CMAC |         0              0 |         0             0
-     3DES ECB |         0              0 |         0             0
-     3DES CBC |         0              0 |         0             0
-     3DES OFB |         0              0 |         0             0
-     3DES CFB |         0              0 |         0             0
-     3DES CTR |         0              0 |         0             0
-    3DES CMAC |         0              0 |         0             0
-      AES ECB |         0              0 |         0             0
-      AES CBC |         0              0 |         0             0
-      AES OFB |         0              0 |         0             0
-      AES CFB |         0              0 |         0             0
-      AES CTR |         0              0 |         0             0
-     AES CMAC |         0              0 |         0             0
-      AES XTS |         0              0 |         0             0
+
+   function     |          # hardware      |       # software
+  --------------+--------------------------+-------------------------
+                |       ENC    CRYPT   DEC |        ENC    CRYPT   DEC
+  --------------+--------------------------+-------------------------
+          SHA-1 |               0          |                0
+        SHA-224 |               0          |                0
+        SHA-256 |               0          |                0
+        SHA-384 |               0          |                0
+        SHA-512 |               0          |                0
+          GHASH |               0          |                0
+          P_RNG |               0          |                0
+   DRBG-SHA-512 |             169          |                0
+         RSA-ME |               0          |                0
+        RSA-CRT |               0          |                0
+        DES ECB |         0              0 |         0             0
+        DES CBC |         0              0 |         0             0
+        DES OFB |         0              0 |         0             0
+        DES CFB |         0              0 |         0             0
+        DES CTR |         0              0 |         0             0
+       DES CMAC |         0              0 |         0             0
+       3DES ECB |         0              0 |         0             0
+       3DES CBC |         0              0 |         0             0
+       3DES OFB |         0              0 |         0             0
+       3DES CFB |         0              0 |         0             0
+       3DES CTR |         0              0 |         0             0
+      3DES CMAC |         0              0 |         0             0
+        AES ECB |         0              0 |         0             0
+        AES CBC |         0              0 |         0             0
+        AES OFB |         0              0 |         0             0
+        AES CFB |         0              0 |         0             0
+        AES CTR |         0              0 |         0             0
+       AES CMAC |         0              0 |         0             0
+        AES XTS |         0              0 |         0             0
 ```
 **Note:** As you can see, there is already some crypto offload regarding DRBG-SHA-512. That is a good start ;D
 
@@ -242,7 +246,8 @@ yum install openssl-ibmca
 Now all needed packages are successfully installed. At this moment only the default engine of OpenSSL is available. To check it, please issue the following command:
 ```
 openssl engine -c
-(dynamic) Dynamic engine loading support
+
+  (dynamic) Dynamic engine loading support
 ```
 ## Configuring OpenSSL
 To use the ibmca engine and to benefit from the Cryptographic hardware support, the configuration file of OpenSSL needs to be adjusted. To customize OpenSSL configuration to enable dynamic engine loading for ibmca, complete the following steps.
@@ -255,7 +260,8 @@ ls /usr/share/doc/openssl-ibmca-1.3.0/
 Locate the main configuration file of openssl. Its name is openssl.cnf. Please issue the following command:
 ```
 ls -la /etc/pki/tls/openssl.cnf
--rw-r--r-- 1 root root 10923 May 17  2017 /etc/pki/tls/openssl.cnf
+
+  -rw-r--r-- 1 root root 10923 May 17  2017 /etc/pki/tls/openssl.cnf
 ```
 Make a backup copy of the configuration file. We will modify it later, so just in case, please issue the following command:
 ```
@@ -265,118 +271,124 @@ cp -p /etc/pki/tls/openssl.cnf /etc/pki/tls/openssl.cnf.backup
 Check one more time that everything is alright and secured. Please issue the following command:
 ```
 ls -al /etc/pki/tls/openssl.cnf*
--rw-r--r-- 1 root root 10923 May 17  2017 /etc/pki/tls/openssl.cnf
--rw-r--r-- 1 root root 10923 May 17  2017 /etc/pki/tls/openssl.cnf.backup
+
+  -rw-r--r-- 1 root root 10923 May 17  2017 /etc/pki/tls/openssl.cnf
+  -rw-r--r-- 1 root root 10923 May 17  2017 /etc/pki/tls/openssl.cnf.backup
 ```
 
 ### Append the ibmca-related configuration lines to the OpenSSL configuration file
 ```
-root@crypt06:~# tee -a /etc/pki/tls/openssl.cnf < /usr/share/doc/openssl-ibmca-1.3.0/openssl.cnf.sample.s390x
+tee -a /etc/pki/tls/openssl.cnf < /usr/share/doc/openssl-ibmca-1.3.0/openssl.cnf.sample.s390x
 ```
 
 The reference to the ibmca section in the OpenSSL configuration file needs to be inserted. Therefore, insert the following line as show below at the line 10.
 "openssl_conf = openssl_def"
 ```
 vi /etc/pki/tls/openssl.cnf
-#
-# OpenSSL example configuration file.
-# This is mostly being used for generation of certificate requests.
-#
-# This definition stops the following lines choking if HOME isn't
-# defined.
-HOME = .
-RANDFILE = $ENV::HOME/.rnd
-openssl_conf = openssl_def            #<== line inserted
-# Extra OBJECT IDENTIFIER info:
-#oid_file = $ENV::HOME/.oid
-oid_section = new_oids
-# To use this configuration file with the "-extfile" option of the
-# "openssl x509" utility, name here the section containing the
-# X.509v3 extensions to use:
+
+  #
+  # OpenSSL example configuration file.
+  # This is mostly being used for generation of certificate requests.
+  #
+  # This definition stops the following lines choking if HOME isn't
+  # defined.
+  HOME = .
+  RANDFILE = $ENV::HOME/.rnd
+  openssl_conf = openssl_def            #<======================================= line inserted
+  # Extra OBJECT IDENTIFIER info:
+  #oid_file = $ENV::HOME/.oid
+  oid_section = new_oids
+  # To use this configuration file with the "-extfile" option of the
+  # "openssl x509" utility, name here the section containing the
+  # X.509v3 extensions to use:
 ```
 
 # 5 - Checking Hardware Crypto functions
 Now that the customization of OpenSSL in done, test whether you can use the LinuxONE hardware cryptographic functions. First, let's check whether the dynamic engine loading support is enabled by default and the engine ibmca is available and used in the installation.
 ```
 openssl engine -c
-(dynamic) Dynamic engine loading support
-(ibmca) Ibmca hardware engine support
- [RAND, DES-ECB, DES-CBC, DES-OFB, DES-CFB, DES-EDE3, DES-EDE3-CBC, DES-EDE3-OFB, DES-EDE3-CFB, AES-128-ECB, AES-192-ECB, AES-256-ECB, AES-128-CBC, AES-192-CBC, AES-256-CBC, AES-128-OFB, AES-192-OFB, AES-256-OFB, AES-128-CFB, AES-192-CFB, AES-256-CFB, SHA1, SHA256, SHA512]
+
+  (dynamic) Dynamic engine loading support
+  (ibmca) Ibmca hardware engine support
+   [RAND, DES-ECB, DES-CBC, DES-OFB, DES-CFB, DES-EDE3, DES-EDE3-CBC, DES-EDE3-OFB, DES-EDE3-CFB, AES-128-ECB, AES-192-ECB, AES-256-ECB, AES-128-CBC, AES-192-CBC, AES-256-CBC, AES-128-OFB, AES-192-OFB, AES-256-OFB, AES-128-CFB, AES-192-CFB, AES-256-CFB, SHA1, SHA256, SHA512]
 ```
 
 ## Testing Pervasive encryption with OpenSSL
 Now openSSL is properly configured. All crypto operation passing through openSSL will be hardware accelerated if possible. Let's test it in live. Firt of all, let's have a look of the hardware crypto offload status. Please issue the following command:
 ```
 icastats
- function     |          # hardware      |       # software
---------------+--------------------------+-------------------------
-              |       ENC    CRYPT   DEC |        ENC    CRYPT   DEC
---------------+--------------------------+-------------------------
-        SHA-1 |               0          |                0
-      SHA-224 |               0          |                0
-      SHA-256 |               0          |                0
-      SHA-384 |               0          |                0
-      SHA-512 |               0          |                0
-        GHASH |               0          |                0
-        P_RNG |               0          |                0
- DRBG-SHA-512 |             676          |                0
-       RSA-ME |               0          |                0
-      RSA-CRT |               0          |                0
-      DES ECB |         0              0 |         0             0
-      DES CBC |         0              0 |         0             0
-      DES OFB |         0              0 |         0             0
-      DES CFB |         0              0 |         0             0
-      DES CTR |         0              0 |         0             0
-     DES CMAC |         0              0 |         0             0
-     3DES ECB |         0              0 |         0             0
-     3DES CBC |         0              0 |         0             0
-     3DES OFB |         0              0 |         0             0
-     3DES CFB |         0              0 |         0             0
-     3DES CTR |         0              0 |         0             0
-    3DES CMAC |         0              0 |         0             0
-      AES ECB |         0              0 |         0             0
-      AES CBC |         0              0 |         0             0
-      AES OFB |         0              0 |         0             0
-      AES CFB |         0              0 |         0             0
-      AES CTR |         0              0 |         0             0
-     AES CMAC |         0              0 |         0             0
-      AES XTS |         0              0 |         0             0
+
+   function     |          # hardware      |       # software
+  --------------+--------------------------+-------------------------
+                |       ENC    CRYPT   DEC |        ENC    CRYPT   DEC
+  --------------+--------------------------+-------------------------
+          SHA-1 |               0          |                0
+        SHA-224 |               0          |                0
+        SHA-256 |               0          |                0
+        SHA-384 |               0          |                0
+        SHA-512 |               0          |                0
+          GHASH |               0          |                0
+          P_RNG |               0          |                0
+   DRBG-SHA-512 |             676          |                0
+         RSA-ME |               0          |                0
+        RSA-CRT |               0          |                0
+        DES ECB |         0              0 |         0             0
+        DES CBC |         0              0 |         0             0
+        DES OFB |         0              0 |         0             0
+        DES CFB |         0              0 |         0             0
+        DES CTR |         0              0 |         0             0
+       DES CMAC |         0              0 |         0             0
+       3DES ECB |         0              0 |         0             0
+       3DES CBC |         0              0 |         0             0
+       3DES OFB |         0              0 |         0             0
+       3DES CFB |         0              0 |         0             0
+       3DES CTR |         0              0 |         0             0
+      3DES CMAC |         0              0 |         0             0
+        AES ECB |         0              0 |         0             0
+        AES CBC |         0              0 |         0             0
+        AES OFB |         0              0 |         0             0
+        AES CFB |         0              0 |         0             0
+        AES CTR |         0              0 |         0             0
+       AES CMAC |         0              0 |         0             0
+        AES XTS |         0              0 |         0             0
 ```
 As you can see, the libica API already detect some crypto offload to the hardware.
 
 Let's go deeper with some openSSL tests. Please issue the following command:
 ```
-openssl speed -evp aes-128-cbc 
-Doing aes-128-cbc for 3s on 16 size blocks: 33394917 aes-128-cbc's in 2.83s
-Doing aes-128-cbc for 3s on 64 size blocks: 30227460 aes-128-cbc's in 2.84s
-Doing aes-128-cbc for 3s on 256 size blocks: 21680556 aes-128-cbc's in 2.87s
-Doing aes-128-cbc for 3s on 1024 size blocks: 9606871 aes-128-cbc's in 2.91s
-Doing aes-128-cbc for 3s on 8192 size blocks: 1772172 aes-128-cbc's in 2.89s
-OpenSSL 1.0.2g  1 Mar 2016
-built on: reproducible build, date unspecified
-options:bn(64,64) rc4(8x,char) des(idx,cisc,16,int) aes(partial) blowfish(idx) 
-compiler: cc -I. -I.. -I../include  -fPIC -DOPENSSL_PIC -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -DB_ENDIAN -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -Wl,-Bsymbolic-functions -Wl,-z,relro -Wa,--noexecstack -Wall -DOPENSSL_BN_ASM_MONT -DOPENSSL_BN_ASM_GF2m -DSHA1_ASM -DSHA256_ASM -DSHA512_ASM -DAES_ASM -DAES_CTR_ASM -DAES_XTS_ASM -DGHASH_ASM
-The 'numbers' are in 1000s of bytes per second processed.
-type             16 bytes     64 bytes    256 bytes   1024 bytes   8192 bytes
-aes-128-cbc     188805.18k   681182.20k  1933875.38k  3380562.17k  5023402.43k
+openssl speed -evp aes-128-cbc
+
+  Doing aes-128-cbc for 3s on 16 size blocks: 33394917 aes-128-cbc's in 2.83s
+  Doing aes-128-cbc for 3s on 64 size blocks: 30227460 aes-128-cbc's in 2.84s
+  Doing aes-128-cbc for 3s on 256 size blocks: 21680556 aes-128-cbc's in 2.87s
+  Doing aes-128-cbc for 3s on 1024 size blocks: 9606871 aes-128-cbc's in 2.91s
+  Doing aes-128-cbc for 3s on 8192 size blocks: 1772172 aes-128-cbc's in 2.89s
+  OpenSSL 1.0.2g  1 Mar 2016
+  built on: reproducible build, date unspecified
+  options:bn(64,64) rc4(8x,char) des(idx,cisc,16,int) aes(partial) blowfish(idx) 
+  compiler: cc -I. -I.. -I../include  -fPIC -DOPENSSL_PIC -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -DB_ENDIAN -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -Wl,-Bsymbolic-functions -Wl,-z,relro -Wa,--noexecstack -Wall -DOPENSSL_BN_ASM_MONT -DOPENSSL_BN_ASM_GF2m -DSHA1_ASM -DSHA256_ASM -DSHA512_ASM -DAES_ASM -DAES_CTR_ASM -DAES_XTS_ASM -DGHASH_ASM
+  The 'numbers' are in 1000s of bytes per second processed.
+  type             16 bytes     64 bytes    256 bytes   1024 bytes   8192 bytes
+  aes-128-cbc     188805.18k   681182.20k  1933875.38k  3380562.17k  5023402.43k
 ```
 The last line is quite interesting, it shows the encrypion bandwidth of one IFL - encrypting blocks of 8192 bytes of data over and over, as fast as possible. In this case, the observed throughput is roughly 5 GB/s (5023402.43/(1024\*1024)).
 
 Let's test now the decryption capabilities. Please issue the following command:
 ```
 openssl speed -evp aes-128-cbc -decrypt
-Doing aes-128-cbc for 3s on 16 size blocks: 33183167 aes-128-cbc's in 2.86s
-Doing aes-128-cbc for 3s on 64 size blocks: 32184259 aes-128-cbc's in 2.87s
-Doing aes-128-cbc for 3s on 256 size blocks: 27682462 aes-128-cbc's in 2.88s
-Doing aes-128-cbc for 3s on 1024 size blocks: 16928435 aes-128-cbc's in 2.91s
-Doing aes-128-cbc for 3s on 8192 size blocks: 5391831 aes-128-cbc's in 2.93s
-OpenSSL 1.0.2g  1 Mar 2016
-built on: reproducible build, date unspecified
-options:bn(64,64) rc4(8x,char) des(idx,cisc,16,int) aes(partial) blowfish(idx) 
-compiler: cc -I. -I.. -I../include  -fPIC -DOPENSSL_PIC -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -DB_ENDIAN -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -Wl,-Bsymbolic-functions -Wl,-z,relro -Wa,--noexecstack -Wall -DOPENSSL_BN_ASM_MONT -DOPENSSL_BN_ASM_GF2m -DSHA1_ASM -DSHA256_ASM -DSHA512_ASM -DAES_ASM -DAES_CTR_ASM -DAES_XTS_ASM -DGHASH_ASM
-The 'numbers' are in 1000s of bytes per second processed.
-type             16 bytes     64 bytes    256 bytes   1024 bytes   8192 bytes
-aes-128-cbc     185640.10k   717697.76k  2460663.29k  5956947.57k 15075044.22k
+
+  Doing aes-128-cbc for 3s on 16 size blocks: 33183167 aes-128-cbc's in 2.86s
+  Doing aes-128-cbc for 3s on 64 size blocks: 32184259 aes-128-cbc's in 2.87s
+  Doing aes-128-cbc for 3s on 256 size blocks: 27682462 aes-128-cbc's in 2.88s
+  Doing aes-128-cbc for 3s on 1024 size blocks: 16928435 aes-128-cbc's in 2.91s
+  Doing aes-128-cbc for 3s on 8192 size blocks: 5391831 aes-128-cbc's in 2.93s
+  OpenSSL 1.0.2g  1 Mar 2016
+  built on: reproducible build, date unspecified
+  options:bn(64,64) rc4(8x,char) des(idx,cisc,16,int) aes(partial) blowfish(idx) 
+  compiler: cc -I. -I.. -I../include  -fPIC -DOPENSSL_PIC -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -DB_ENDIAN -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -Wl,-Bsymbolic-functions -Wl,-z,relro -Wa,--noexecstack -Wall -DOPENSSL_BN_ASM_MONT -DOPENSSL_BN_ASM_GF2m -DSHA1_ASM -DSHA256_ASM -DSHA512_ASM -DAES_ASM -DAES_CTR_ASM -DAES_XTS_ASM -DGHASH_ASM
+  The 'numbers' are in 1000s of bytes per second processed.
+  type             16 bytes     64 bytes    256 bytes   1024 bytes   8192 bytes
+  aes-128-cbc     185640.10k   717697.76k  2460663.29k  5956947.57k 15075044.22k
 ```
 
 Same computation, as you can see the observed throuthput is 15 GB/s. That is normal because the CBC mode of operation associated with the AES encryption algorithm is faster in decryption that in encryption.
@@ -384,39 +396,40 @@ Same computation, as you can see the observed throuthput is 15 GB/s. That is nor
 Let's check now how much crypto we offload to the hardware. Please issue the following command:
 ```
 icastats
- function     |          # hardware      |       # software
---------------+--------------------------+-------------------------
-              |       ENC    CRYPT   DEC |        ENC    CRYPT   DEC
---------------+--------------------------+-------------------------
-        SHA-1 |             236          |                0
-      SHA-224 |               0          |                0
-      SHA-256 |               0          |                0
-      SHA-384 |               0          |                0
-      SHA-512 |               0          |                0
-        GHASH |               0          |                0
-        P_RNG |               0          |                0
- DRBG-SHA-512 |            1014          |                0
-       RSA-ME |               0          |                0
-      RSA-CRT |               0          |                0
-      DES ECB |         0              0 |         0             0
-      DES CBC |         0              0 |         0             0
-      DES OFB |         0              0 |         0             0
-      DES CFB |         0              0 |         0             0
-      DES CTR |         0              0 |         0             0
-     DES CMAC |         0              0 |         0             0
-     3DES ECB |         0              0 |         0             0
-     3DES CBC |         0              0 |         0             0
-     3DES OFB |         0              0 |         0             0
-     3DES CFB |         0              0 |         0             0
-     3DES CTR |         0              0 |         0             0
-    3DES CMAC |         0              0 |         0             0
-      AES ECB |         0              0 |         0             0
-      AES CBC |  96681976      115370154 |         0             0
-      AES OFB |         0              0 |         0             0
-      AES CFB |         0              0 |         0             0
-      AES CTR |         0              0 |         0             0
-     AES CMAC |         0              0 |         0             0
-      AES XTS |         0              0 |         0             0
+
+   function     |          # hardware      |       # software
+  --------------+--------------------------+-------------------------
+                |       ENC    CRYPT   DEC |        ENC    CRYPT   DEC
+  --------------+--------------------------+-------------------------
+          SHA-1 |             236          |                0
+        SHA-224 |               0          |                0
+        SHA-256 |               0          |                0
+        SHA-384 |               0          |                0
+        SHA-512 |               0          |                0
+          GHASH |               0          |                0
+          P_RNG |               0          |                0
+   DRBG-SHA-512 |            1014          |                0
+         RSA-ME |               0          |                0
+        RSA-CRT |               0          |                0
+        DES ECB |         0              0 |         0             0
+        DES CBC |         0              0 |         0             0
+        DES OFB |         0              0 |         0             0
+        DES CFB |         0              0 |         0             0
+        DES CTR |         0              0 |         0             0
+       DES CMAC |         0              0 |         0             0
+       3DES ECB |         0              0 |         0             0
+       3DES CBC |         0              0 |         0             0
+       3DES OFB |         0              0 |         0             0
+       3DES CFB |         0              0 |         0             0
+       3DES CTR |         0              0 |         0             0
+      3DES CMAC |         0              0 |         0             0
+        AES ECB |         0              0 |         0             0
+        AES CBC |  96681976      115370154 |         0             0
+        AES OFB |         0              0 |         0             0
+        AES CFB |         0              0 |         0             0
+        AES CTR |         0              0 |         0             0
+       AES CMAC |         0              0 |         0             0
+        AES XTS |         0              0 |         0             0
 ```
 **Note:** We can clearly see here the crypto offload in encryption operations. 96681976 operations were offloaded to the CPACF.
 **Note2:** We can clearly see here the crypto offload in decryption operations. 115370154 operations were offloaded to the CPACF.
